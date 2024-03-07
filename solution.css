@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 15px;
+  padding: 0;
 }
 
 h2 {
@@ -16,7 +16,7 @@ h2 {
   text-align: center;
   border-radius: var(--radius);
   background-color: lightgrey;
-  border: 10px solid black;
+  border: 1px solid black;
   height: 2rem;
   cursor: pointer;
   transition: 1s;
@@ -29,7 +29,7 @@ h2 {
 }
 
 a {
-  text-decoration: overline;
+  text-decoration: none;
   color: black;
 }
 
@@ -40,7 +40,7 @@ a {
   a {
     width: 25%;
     text-align: center;
-    color: #07b010;
+    color: var(--color);
 
     .logo {
       width: 35%;
@@ -53,19 +53,19 @@ a {
 
   ul {
     display: flex;
+    justify-content: space-around;
 
     li {
       list-style-type: none;
-      margin: 0 5rem;
     }
   }
 }
 
 #hero {
-  background-image: url("asset/super_hero.webp");
+  background-image: url("assets/super_hero.webp");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 25rem;
   display: flex;
   justify-content: flex-end;
@@ -82,15 +82,14 @@ section:not(#hero) {
 }
 
 footer {
-  background-color: var(--colors);
+  background-color: var(--color);
   flex-direction: row;
-  flex-direction: row-reverse;
   display: flex;
   padding: 5rem;
 
   form {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 3rem;
     width: 50%;
 
@@ -110,7 +109,7 @@ footer {
   }
 }
 
-section.presentation {
+section#presentation {
   img {
     width: 33%;
     float: left;
@@ -118,11 +117,11 @@ section.presentation {
   }
 
   div {
-    margin: 0 1rem;
+    padding: 0 1rem;
   }
 }
 
-section#values {
+section#values > div {
   display: flex;
 
   div {
@@ -152,14 +151,14 @@ section#team {
 
     img {
       width: 15%;
-      flex: 1px;
+      flex: 1;
       border-radius: 5rem;
     }
     h4 {
-      flex: 1px;
+      flex: 1;
     }
     div {
-      flex: 4px;
+      flex: 4;
     }
   }
 }
